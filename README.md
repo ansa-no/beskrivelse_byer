@@ -29,9 +29,9 @@ Installeres enkelt via vedlagt link.
 
 
 ### Git
-Git er et programm som holder kontroll på filene.
+Git er et program som holder kontroll på filene.
 GitHub er en plass hvor vi lagrer filene.
-Du må installlere Git for å kunne hente ned filene til datamaskinen din.
+Du må installere Git for å kunne hente ned filene til datamaskinen din.
 
 For å kunne kjøre LaTex så må filene ned på lokal maskin, så derfor må Git installeres.
 For å bruke GitHub må man lage en bruker der.
@@ -43,16 +43,16 @@ Her er en liten intro om hvordan å redigere filer online:
 https://guides.github.com/activities/hello-world/
 
 
-### PDF of Markdown
+### PDF og Markdown
 Kjør LaTex for å generere `.pdf` som pushes opp på GitHub sammen med de nye/endrede `.tex` filene.
 
-Man kan også kjøre følgende kommando i terminal for å lage en markdown som fungerer som en readme i gejeldende mappe. 
+Man kan også kjøre følgende kommando i terminal for å lage en markdown som fungerer som en readme i gjeldende mappe. 
 Sørg for å være i rett mappe (e.g. "München"). 
 Man må også ha Pandoc installert (https://pandoc.org/installing.html).
 
 ```shell
 pandoc -s index.tex -o README.md
 ```
-Man kan igså generere en `.pdf` online ved å kopiere **linken** til relevant `index.tex` inn her:
+Man kan også generere en `.pdf` on-line ved å kopiere **linken** til relevant `index.tex` inn her:
 https://latexonline.cc/
 
