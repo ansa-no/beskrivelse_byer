@@ -1,0 +1,10 @@
+.Rproj.user
+.Rproj
+.Rhistory
+.RData
+.Ruserdata
+
+# LaTex trash
+.toc
+.gz
+.log

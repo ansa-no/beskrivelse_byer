@@ -1,0 +1,75 @@
+\documentclass[a4paper]{report}
+\usepackage[landscape, margin=0.5in]{geometry} % marginer og landskap
+% Bruk XeLaTex!
+\XeTeXinputencoding{utf8} % for å få norske bokstaver til å virke
+%\usepackage{polyglossia} % språk-pakke
+%\setmainlanguage{norsk} % norsk set-up fra språk-pakken
+
+%\usepackage{MyriadPro}
+
+\usepackage{fontspec, xltxtra, xunicode} % pakker for å kunne bruke gitt font
+%\setmainfont[Mapping=tex-text]{Myriad Pro}
+%\setmainfont{Myriad Pro} % font
+%\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont[Mapping=tex-text]{Myriad Pro}
+%\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+%\setsansfont{Myriad Pro}
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor} % for å kunne skrive farges slik som i teksten under
+\definecolor{ansag}{RGB}{188, 202, 214}  % definerer ANSA-fargene:
+\definecolor{ansab}{RGB}{0, 55, 152}
+\definecolor{ansar}{RGB}{125, 12, 0}
+
+\usepackage{url} % www-linker
+\usepackage[colorlinks]{hyperref} % farger etc. på linker
+\hypersetup{colorlinks=true, urlcolor=ansar}
+\sloppy % for å bryte opp lange url-adresser
+
+\usepackage{epstopdf} % for å kunne importere .eps filer (grafikk)
+\usepackage[gen]{eurosym} % for å få euro-symbol
+\usepackage{graphicx}
+\graphicspath{./gfx/} % hvor bildene ligger
+\usepackage[labelformat=empty, font={it}]{caption} % tar vekk figure_x under bildene + itallic under bildene
+
+\usepackage{flowfram} % selve pakken som lager rammeverket
+\vtwotonebottom{0.4cm}{0.3\paperwidth}{[RGB]{125, 12, 0}}{bottomleft}%
+{0.6\paperwidth}{[RGB]{255, 255, 255}}{bottomright} %rød linje nede venstre
+\htwotoneright{0.8cm}{0.5\textheight}{[RGB]{188, 202, 214}}{sidelright}%
+{1\textheight}{[RGB]{188, 202, 214}}{sidenoneright} % grå linje høyre
+%\showtypeblocktrue % for å se rammeverket
+%\showmarginstrue 
+%\showframebboxtrue
+
+\usepackage{parskip} % får ikke tab (indent) på ny linje
+\renewcommand{\chaptername}{} % tar vekk kapittelnavn
+\renewcommand{\thechapter}{} % tar vekk kapittel nr.
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{}
+
+\renewcommand{\contentsname}{Innhold}
+
+%\adjustheight{\textheight}
+\pagestyle{empty} % tar vekk sidetall i midten på alle sider 
+\renewcommand{\chapterfirstpagestyle}{empty} % tar vekk sidetall i midten på første side
+\setlength{\columnsep}{1cm} % avstand mellom kolonnene
+
+\usepackage{etoolbox} % slik at neste kapittel kommer på samme side
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+\makeatletter
+%\patchcmd{\@makechapterhead}{\vspace*{50\p@}}{}{}{} % avstand før og etter kapitteltittel
+\patchcmd{\@makechapterhead}{\vskip 40\p@}{\vskip 20\p@}{}{}
+\makeatother
+
+\NcolumnStop[1]{3}{0.2\textheight}
+\Ncolumn[>1]{3}
+
+\setstaticframe{\value{maxstatic}}{label=header, valign=t} % rammebetingelser for overskrift
+\newdynamicframe{\textwidth}{\headheight}{0pt}{-\footskip}[footer] % frame for sidetall nederst
+\setdynamiccontents*{footer}{\hfill side \thepage\ av \pageref*{lastpage}} % sidetall nederst
+
+
+
+
