@@ -1,11 +1,11 @@
 .Rproj.user
-.Rproj
+*.Rproj
 .Rhistory
 .RData
 .Ruserdata
 .DS_Store
 
 # LaTex trash
-.toc
-.gz
-.log
+*.toc
+*.gz
+*.log
