@@ -46,7 +46,9 @@ https://guides.github.com/activities/hello-world/
 ### PDF of Markdown
 Kjør LaTex for å generere `.pdf` som pushes opp på GitHub sammen med de nye/endrede `.tex` filene.
 
-For enkelhedsskyld, så kan man også kjøre følgende kommando i terminal for å lage en markdown som fungerer som en readme i gejeldende mappe. Sørg for å være i rett mappe (e.g. "München"):
+Man kan også kjøre følgende kommando i terminal for å lage en markdown som fungerer som en readme i gejeldende mappe. 
+Sørg for å være i rett mappe (e.g. "München"). 
+Man må også ha Pandoc installert (https://pandoc.org/installing.html).
 
 ```shell
 pandoc -s index.tex -o README.md

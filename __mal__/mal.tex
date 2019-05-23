@@ -1,15 +1,15 @@
 \documentclass[a4paper]{report}
 \usepackage[landscape, margin=0.5in]{geometry} % marginer og landskap
 % Bruk XeLaTex!
-\XeTeXinputencoding{utf8} % for å få norske bokstaver til å virke
+%%%%%%% %\XeTeXinputencoding{utf8} % for å få norske bokstaver til å virke
 %\usepackage{polyglossia} % språk-pakke
 %\setmainlanguage{norsk} % norsk set-up fra språk-pakken
 
 %\usepackage{MyriadPro}
 
-\usepackage{fontspec, xltxtra, xunicode} % pakker for å kunne bruke gitt font
+%%%%%% \usepackage{fontspec, xltxtra, xunicode} % pakker for å kunne bruke gitt font
 %\setmainfont[Mapping=tex-text]{Myriad Pro}
-%\setmainfont{Myriad Pro} % font
+%%%%%%%%% %\setmainfont{Myriad Pro} % font
 %\defaultfontfeatures{Mapping=tex-text}
 %\setromanfont[Mapping=tex-text]{Myriad Pro}
 %\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
@@ -69,7 +69,5 @@
 \setstaticframe{\value{maxstatic}}{label=header, valign=t} % rammebetingelser for overskrift
 \newdynamicframe{\textwidth}{\headheight}{0pt}{-\footskip}[footer] % frame for sidetall nederst
 \setdynamiccontents*{footer}{\hfill side \thepage\ av \pageref*{lastpage}} % sidetall nederst
-
-
 
 
