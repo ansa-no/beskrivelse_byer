@@ -43,7 +43,7 @@ Her er en liten intro om hvordan å redigere filer online:
 https://guides.github.com/activities/hello-world/
 
 
-### PDF of Markdown
+### PDF og Markdown
 Kjør LaTex for å generere `.pdf` som pushes opp på GitHub sammen med de nye/endrede `.tex` filene.
 
 Man kan også kjøre følgende kommando i terminal for å lage en markdown som fungerer som en readme i gejeldende mappe. 
